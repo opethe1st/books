@@ -1,6 +1,6 @@
 import logging
 
-def setup_logging():
+def get_logging_config():
     log_config = {
         "version": 1,
         "disable_existing_loggers": False,
@@ -24,4 +24,4 @@ def setup_logging():
         },
     }
 
-    logging.config.dictConfig(log_config)
+    return logging.config.dictConfig(log_config)
