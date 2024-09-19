@@ -1,8 +1,8 @@
 
-from fastapi import FastAPI
 import logging
 import uuid
 
+from fastapi import FastAPI
 
 app = FastAPI()
 
@@ -15,4 +15,4 @@ def index():
 
 @app.get("/books/{book_id}")
 def get_book(book_id: uuid.UUID):
-    return {}
+    return {"id": book_id}
